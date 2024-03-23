@@ -48,7 +48,7 @@ export default async function HomePage() {
               icon={faEnvelope}
               className="text-slate-200 size-6"
             />
-            <p className="font-serif font-medium">What's New</p>
+            <p className="font-serif font-medium">{`What's New`}</p>
           </div>
           <FontAwesomeIcon
             icon={faBell}
