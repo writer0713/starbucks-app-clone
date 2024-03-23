@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 export default function BottomAppBar() {
   return (
-    <div className="absolute bottom-0 left-0 right-0 flex justify-around w-full h-20 p-3 rounded-t-lg bg-slate-100 ring ring-white">
+    <footer className="fixed bottom-0 flex justify-around w-full h-20 p-3 rounded-t-lg bg-slate-100 ring ring-white">
       <Link href="/home">
         <div className="flex flex-col items-center justify-center *:text-[#01B275] home">
           <FontAwesomeIcon icon={faHouse} width="35" height="35" />
@@ -45,6 +45,6 @@ export default function BottomAppBar() {
           <span className="text-xs">Other</span>
         </div>
       </Link>
-    </div>
+    </footer>
   );
 }

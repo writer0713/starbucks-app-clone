@@ -7,8 +7,8 @@ export default function LoadingPage() {
 
       {/* top */}
       <div className="flex flex-col gap-10 p-6 top pt-20">
-        <div className="w-full h-20 bg-slate-100"></div>
-        <div className="w-full h-20 bg-slate-100"></div>
+        <div className="w-full h-10 bg-slate-100"></div>
+        <div className="w-full h-10 bg-slate-100"></div>
       </div>
       {/* top */}
 
@@ -17,9 +17,9 @@ export default function LoadingPage() {
         <div className="w-3/4 h-10 bg-slate-200 min-w-2xl"></div>
         <div className="flex overflow-x-hidden">
           <div className="flex flex-nowrap gap-8">
-            <div className="rounded-full w-32 h-32 bg-slate-200"></div>
-            <div className="rounded-full size-32 bg-slate-200"></div>
-            <div className="rounded-full size-32 bg-slate-200"></div>
+            <div className="rounded-full size-16 bg-slate-200"></div>
+            <div className="rounded-full size-16 bg-slate-200"></div>
+            <div className="rounded-full size-16 bg-slate-200"></div>
           </div>
         </div>
       </div>
