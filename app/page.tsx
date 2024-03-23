@@ -14,7 +14,7 @@ export default function SplashScreen() {
   }, []);
 
   return (
-    <div className="bg-[#01B275] w-full h-screen flex justify-center items-center">
+    <div className="bg-primary w-full h-screen flex justify-center items-center">
       <Image
         src={'/logo.png'}
         alt="logo"
