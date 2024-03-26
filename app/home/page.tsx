@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 
 export default async function HomePage() {
-  await new Promise((resolve) => setTimeout(resolve, 1500));
+  // await new Promise((resolve) => setTimeout(resolve, 1500));
   return (
     <div className="responsive w-full min-h-screen max-h-full bg-white *:text-black">
       <div className="flex flex-col gap-5 justify-between pt-20 pb-40 px-4">
@@ -18,7 +18,8 @@ export default async function HomePage() {
         </div>
 
         <div className="flex justify-between items-center rounded-md border px-6 py-5 shadow-xl">
-          <div className="flex flex-col gap-5">
+          {/* left side */}
+          <div className="flex flex-col gap-5 flex-shrink-0">
             <div className="text-sm">
               <p>스타벅스 리워드</p>
               <p>회원 신규가입 첫 구매 시,</p>
@@ -34,7 +35,17 @@ export default async function HomePage() {
               </button>
             </div>
           </div>
-          <Image src={'/coffee.png'} alt="coffee" width={110} height={30} />
+
+          {/* right side */}
+          <div className="relative h-[110px] w-[50px]">
+            <Image
+              src={'/coffee.png'}
+              alt="coffee"
+              sizes="50"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </div>
 
         <div className="flex justify-between">
@@ -65,8 +76,10 @@ export default async function HomePage() {
             height={50}
           />
           <div className="text-slate-800 text-xs">
-            <p>증정품은 매장별 예약 가능 일자 및 재고가 상이할 수 있으며,</p>
-            <p>한정 수량 제작되어 조기 소진 될 수 있습니다.</p>
+            <p>
+              증정품은 매장별 예약 가능 일자 및 재고가 상이할 수 있으며, 한정
+              수량 제작되어 조기 소진 될 수 있습니다.
+            </p>
           </div>
         </div>
       </div>
