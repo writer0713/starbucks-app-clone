@@ -10,7 +10,7 @@ import Image from 'next/image';
 export default async function HomePage() {
   // await new Promise((resolve) => setTimeout(resolve, 1500));
   return (
-    <div className="responsive w-full min-h-screen max-h-full bg-white *:text-black">
+    <div className="relative w-full min-h-screen max-h-full bg-white *:text-black">
       <div className="flex flex-col gap-5 justify-between pt-20 pb-40 px-4">
         <div className="mb-5">
           <h1 className="text-2xl font-bold">안녕하세요.</h1>
