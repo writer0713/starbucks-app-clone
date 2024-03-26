@@ -1,34 +1,51 @@
 import BottomAppBar from '@/components/footer';
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons/faCirclePlus';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 
 export default async function PayPage() {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  // await new Promise((resolve) => setTimeout(resolve, 500));
   return (
     <div className="w-full min-h-screen max-h-full bg-white *:text-black pt-20 pb-40">
-      <h1>PAY PAGE</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi
-        voluptas similique libero hic, atque corrupti quisquam minus, quidem
-        officiis consectetur incidunt distinctio sapiente sequi exercitationem
-        quo harum alias esse nostrum ex perspiciatis magnam facilis placeat.
-        Earum commodi facilis porro iusto quam reiciendis. Provident aperiam
-        dolore debitis numquam facere vero, temporibus soluta ab illo magnam
-        libero. Fugiat provident exercitationem atque eveniet. Saepe impedit
-        dolor minima excepturi sed, amet reprehenderit culpa voluptatum ratione
-        quod cumque labore cum architecto sapiente voluptatem deserunt, incidunt
-        unde consectetur natus suscipit! Est, optio? Inventore harum iste omnis?
-        Aliquid laboriosam quae cumque reiciendis molestiae repudiandae veniam
-        dolorum, sint saepe accusantium ipsa soluta repellendus doloribus sunt
-        numquam praesentium placeat, quaerat fuga similique maxime. Quibusdam
-        error officiis vel in unde accusamus deleniti vitae, velit ex
-        perspiciatis dolore laborum deserunt, optio quos tempora, nemo sint non
-        natus voluptatum consectetur itaque facilis. Voluptatem ex nemo
-        accusantium iste vitae, nobis alias. Debitis, voluptatem animi cum
-        inventore perferendis nulla at error magnam modi dolorum, optio, libero
-        eum aut aperiam eveniet cumque facere atque tempora sunt! Laboriosam
-        iure vel dignissimos recusandae, nostrum soluta voluptate a placeat
-        deserunt perferendis omnis in quis quisquam dolorum, suscipit sunt!
-        Eligendi iste explicabo quasi alias culpa. Molestias, consectetur sunt.
-      </p>
+      <div className="flex flex-col gap-y-10">
+        <div className="flex flex-col px-4 gap-y-5">
+          {/* top - title */}
+          <div>
+            <h1 className="text-3xl font-bold">Pay</h1>
+          </div>
+
+          {/* center */}
+          <div className="w-full flex flex-col items-center shadow-xl p-6 h-[500px] gap-3">
+            {/* card place-holder */}
+            <div className="flex justify-center items-center w-full h-48 bg-[#F7F7F8] border border-gray-400 border-dashed rounded-lg">
+              <FontAwesomeIcon
+                icon={faCirclePlus}
+                className="text-gray-400 size-10"
+              />
+            </div>
+
+            <h1 className="text-lg font-semibold">
+              스타벅스 카드를 등록해보세요.
+            </h1>
+
+            <div className="flex flex-col items-center leading-5 text-slate-600 text-md">
+              <p>매장과 사이렌오더에서 쉽고 편리하게</p>
+              <p>사용할 수 있고, 별도 적립할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* bottom */}
+        <div className="relative w-full h-24">
+          <Image
+            src={'/banner.png'}
+            alt="banner"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+      </div>
+
       <BottomAppBar />
     </div>
   );
